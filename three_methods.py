@@ -106,7 +106,7 @@ class DNAMatcherApp:
 
         # 4. Results Section
         tk.Label(self.root, text="Results:", font=("Arial", 14, "bold")).pack(anchor="w")
-        self.result_text = tk.Text(self.root, height=6, width=60, state="disabled", bg="#f0f0f0")
+        self.result_text = tk.Text(self.root, height=6, width=60, state="disabled", bg="#000000")
         self.result_text.pack(fill="both", expand=True)
 
     def browse_query(self):
