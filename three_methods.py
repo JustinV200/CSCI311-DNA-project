@@ -139,8 +139,11 @@ class DNAMatcherApp:
 
         query_data = read_fasta(q_file)
         db_data = read_fasta(db_file)
-
+        #for debug
+        #print(f"Query Data: {query_data}\nDatabase Data: {db_data}")
         if not query_data or not db_data:
+            #for debug
+            #self.log_result(f"Query Data: {query_data}\nDatabase Data: {db_data}")
             self.log_result("Error: One or both files are empty or invalid.")
             return
 
