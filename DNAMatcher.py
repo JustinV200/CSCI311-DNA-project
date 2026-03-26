@@ -37,18 +37,18 @@ class DNAMatcherApp:
         tk.Entry(frame_db, textvariable=self.db_path, width=40).pack(side="left", padx=5)
         tk.Button(frame_db, text="Browse", command=self.browse_db).pack(side="left")
 
-        # 2. Algorithm Selection Section
+        # Algorithm Selection Section
         tk.Label(self.root, text="Step 2: Select Algorithm", font=("Arial", 14, "bold")).pack(anchor="w", pady=(20, 10))
         
         tk.Radiobutton(self.root, text="1. Longest Common Substring", variable=self.algo_choice, value=1).pack(anchor="w")
         tk.Radiobutton(self.root, text="2. Longest Common Subsequence (LCS)", variable=self.algo_choice, value=2).pack(anchor="w")
         tk.Radiobutton(self.root, text="3. Edit Distance", variable=self.algo_choice, value=3).pack(anchor="w")
 
-        # 3. Run Button
+        #Run Button
         tk.Button(self.root, text="Run Matching Algorithm", bg="green", fg="white", font=("Arial", 12, "bold"), 
                   command=self.run_matching).pack(pady=20, fill="x")
 
-        # 4. Results Section
+        #Results Section
         tk.Label(self.root, text="Results:", font=("Arial", 14, "bold")).pack(anchor="w")
         self.result_text = tk.Text(self.root, height=6, width=60, state="disabled", bg="#000000")
         self.result_text.pack(fill="both", expand=True)
